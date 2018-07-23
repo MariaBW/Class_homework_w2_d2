@@ -18,4 +18,20 @@ class TestTeam < MiniTest::Test
     assert_equal("Partick Thistle", result)
   end
 
+  def test_get_players()
+    result = @team1.get_players
+    assert_equal(["John", "Paul", "George", "Ringo"], result)
+  end
+
+  def test_get_coach()
+    result = @team1.get_coach
+    assert_equal("Yoko", result)
+  end
+
+  def test_set_coach()
+    result = @team1.set_coach("Yoko Ono")
+    assert_equal("Yoko Ono", result)
+  end
+  
+
 end
