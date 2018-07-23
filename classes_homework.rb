@@ -10,5 +10,20 @@ class Student
     return @name
   end
 
+  def get_cohort()
+    return @cohort
+  end
+
+  def set_name(name)
+    @name = name
+  end
+
+  def set_cohort(cohort)
+    @cohort = cohort
+  end
+  
+
+
+
 
 end
