@@ -28,6 +28,13 @@ class TestStudent < MiniTest::Test
     assert_equal("Akiko", result)
   end
 
+  def test_set_cohort()
+    @student1.set_cohort("G11")
+    result = @student1.set_cohort("G11")
+    assert_equal("G11", result)
+  end
+  
+
 
 
 
