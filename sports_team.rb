@@ -32,6 +32,15 @@ class SportsTeam
     @players.push(newbie)
   end
 
+  def check_player(stranger)
+    for player in @players
+      return true if player == stranger
+    end
+    return false
+  end
+
+  
+
 
 
 end
