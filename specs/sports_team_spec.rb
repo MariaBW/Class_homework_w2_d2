@@ -30,5 +30,11 @@ class TestTeam < MiniTest::Test
     assert_equal("Yoko Ono", @team1.coach)
   end
 
+  def test_add_player()
+    @team1.add_player("Sooty")
+    result = @team1.players.length
+    assert_equal(5, result)
+  end
+
 
 end
