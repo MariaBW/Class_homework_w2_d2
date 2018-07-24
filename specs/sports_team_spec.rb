@@ -26,8 +26,8 @@ class TestTeam < MiniTest::Test
   end
 
   def test_set_coach()
-    result = @team1.coach("Yoko Ono")
-    assert_equal("Yoko Ono", result)
+    @team1.coach = "Yoko Ono"
+    assert_equal("Yoko Ono", @team1.coach)
   end
 
 
