@@ -1,7 +1,7 @@
 class SportsTeam
 
 
-  attr_reader :team_name, :players
+  attr_reader :team_name, :players, :points
   attr_accessor :coach
 
 
@@ -9,6 +9,7 @@ class SportsTeam
     @team_name = team_name
     @players = players
     @coach = coach
+    @points = 0
 
   end
 
@@ -32,16 +33,23 @@ class SportsTeam
     @players.push(newbie)
   end
 
+  def check_player(stranger)
+    for player in @players
+      return true if player == stranger
+    end
+    return false
+  end
+
   # def check_player(stranger)
-  #   for player in @players
-  #     return true if player == stranger
-  #   end
-  #   return false
+  #   @players.each { |player| player == stranger ? return true : return false }
   # end
 
-  def check_player(stranger)
-    @players.each { |player| player == stranger ? return true : return false }
+  def update_points(result)
+    if result == "win"; @points =+ 1
+    end
   end
+
+
 
 
 
